@@ -1,10 +1,10 @@
 import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="flex flex-row w-">
-      
-      My app
+    <div>
+      <Navbar/>
     </div>
   );
 }
