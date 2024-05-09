@@ -1,11 +1,12 @@
 import React from "react";
+import Booking from './Components/Booking';
 
 function App() {
   return (
-    <div className="flex flex-row w-">
-      
-      My app
-    </div>
+   
+    //rendering our component
+   <Booking/>
+   
   );
 }
 
