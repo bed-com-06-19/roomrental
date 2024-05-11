@@ -3,9 +3,11 @@ import Booking from './Components/Booking';
 
 function App() {
   return (
-   
+      
+    <Booking/>
+    
     //rendering our component
-   <Booking/>
+
    
   );
 }
