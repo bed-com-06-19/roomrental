@@ -1,14 +1,11 @@
 import React from "react";
-import Booking from './Components/Booking';
+import Payment from './Components/Payment';
 
 function App() {
   return (
-      
-    <Booking/>
-    
-    //rendering our component
-
-   
+    <div>
+      <Payment/>
+    </div>
   );
 }
 
