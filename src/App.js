@@ -3,8 +3,9 @@ import Payment from './Components/Payment';
 
 function App() {
   return (
-    <div>
-      <Payment/>
+    <div className="bg-blue-500 h-screen flex justify-center items-center">
+      {/* This is the Payment component */}
+      <Payment />
     </div>
   );
 }
