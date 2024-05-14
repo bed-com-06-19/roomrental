@@ -2,17 +2,20 @@ import React from 'react'
 
 const Rooms = () => {
     return(
-        <div> 
+        <div className='max-w-[1640px] mx-auto p-4 py-12 grid md:grid-cols-3 gap-6'> 
             {/*card*/}
-            <div>
+            <div className='rounded-xl relative'>
                 {/*Overlay*/}
-                <div>
-                    <p>Double Room</p>
-                    <p>No.: 46</p>
-                    <p>Remaining: 20/92</p>
-                    <button>Book Now</button>
+                <div className = 'abslute w-full h-full bg-black rounded-xl text-white'>
+                    <p className='font-bold text-2xl px-2 pt-4'>Double Rooms</p>
+                    <p className='px-2'>No.: 46</p>
+                    <p className='px-2'>Remaining: 20/92</p>
+                    <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Book Now</button>
                 </div>
-                <img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nrtec.in%2Fhostel%2F&psig=AOvVaw2QIIHoqIHzo5yiaT9qgRki&ust=1715717061289000&source=images&cd=vfe&opi=89978449&ved=0CAQQjB1qFwoTCLDhh-fWjIYDFQAAAAAdAAAAABAd' alt='' />
+                 <img 
+                    className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' 
+                    src='C:\GitHub-Projects\WEB\pictures\room1.jpeg' alt='/'
+                 />
             </div>
         </div>
     )
