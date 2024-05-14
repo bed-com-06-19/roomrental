@@ -1,12 +1,14 @@
 import React from "react";
+import Gallery from "./Gallery";
 
 function App() {
   return (
-    <div className="flex flex-row w-">
-      
-      My app
-    </div>
-  );
+    <>
+        <div>
+              <Gallery/>
+        </div>
+    </>
+  )
 }
 
 export default App;
