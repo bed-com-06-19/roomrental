@@ -16,23 +16,28 @@ const Navbar = () => {
     setSearchBy(event.target.value);
   };
 
+  // Function to toggle search dropdown visibility
+  const toggleSearchDropdown = () => {
+    setisOpen(!isOpen);
+  };
+
   return (
     <nav className='shadow-md w-full fixed top-0 left-0 z-50 bg-black'>
       <div className='md:px-10 py-4 px-7 md:flex justify-between items-center'>
         {/* Logo and RoomRental */}
         <div className='flex items-center gap-2'>
           <HomeModernIcon className='w-7 h-7 text-brown-600'/>
-          <span className='font-bold text-white'>RoomRental</span>
+          <span className='text-xl font-bold text-[#00df9a]'>RoomRental</span>
         </div>
 
         {/* Menu icon (Bars3BottomRightIcon) */}
         <div className={`w-7 h-7 cursor-pointer md:hidden ${isOpen ? 'hidden' : 'block'}`} onClick={() => setisOpen(true)}>
-          <Bars3BottomRightIcon />
+          <Bars3BottomRightIcon className="text-white" />
         </div>
 
         {/* Close icon (XMarkIcon) */}
         <div className={`w-7 h-7 cursor-pointer md:hidden ${isOpen ? 'block' : 'hidden'}`} onClick={() => setisOpen(false)}>
-          <XMarkIcon />
+          <XMarkIcon className="text-white" />
         </div>
 
         {/* Links */}
@@ -43,7 +48,7 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <button className='btn bg-blue-500 text-white py-1 px-3 md:ml-8 rounded'>Landlord LogIn</button>
+            <button className='btn bg-gray-500 text-[#00df9a] py-1 px-3 md:ml-8 rounded'>Landlord LogIn</button>
           </li>
         </ul>
 
@@ -54,16 +59,16 @@ const Navbar = () => {
             placeholder="Search hostels..."
             className="py-1 px-2 rounded border border-gray-300 focus:outline-none text-sm"
           />
-          <div className="absolute right-1 top-1/2 transform -translate-y-1/2">
+          <div className="absolute right-1 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={toggleSearchDropdown}>
             <ChevronDownIcon className="w-4 h-4 text-gray-500"/>
           </div>
         </div>
 
         {/* Dropdown list */}
         {isOpen && (
-          <div className="md:relative md:ml-4">
+          <div className="md:absolute md:top-full md:left-0 md:w-full md:bg-white md:shadow-md md:rounded-b-md md:border md:border-gray-300 md:mt-1">
             <select
-              className="py-1 px-2 rounded border border-gray-300 focus:outline-none text-sm"
+              className="py-1 px-2 rounded border border-gray-300 focus:outline-none text-sm w-full"
               value={searchBy}
               onChange={handleDropdownChange}
             >
@@ -81,4 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

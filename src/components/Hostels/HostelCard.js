@@ -1,7 +1,7 @@
 import React from 'react';
 import hostel1 from '../../Assets/Images/hostel1.jpg';
 
-const HostelCard = ({ name, image, distance, location, rating }) => {
+const HostelCard = ({ name, image, distance, location, gender, rating }) => {
   return (
     <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
       <div className="w-full md:h-48 overflow-hidden">
@@ -11,6 +11,7 @@ const HostelCard = ({ name, image, distance, location, rating }) => {
         <h2 className="text-xl font-semibold mb-2">{name}</h2>
         <p className="text-sm text-gray-600 mb-2">Distance from Campus: {distance}</p>
         <p className="text-sm text-gray-600 mb-2">Location: {location}</p>
+        <p className="text-sm text-gray-600 mb-2">Gender: {gender}</p> {/* Displaying gender */}
         <div className="flex items-center mb-2">
           <p className="text-sm text-gray-600 mr-2">Rating:</p>
           <div className="flex">
@@ -30,7 +31,7 @@ const HostelCard = ({ name, image, distance, location, rating }) => {
             ))}
           </div>
         </div>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+        <button className="bg-gray-500 hover:bg-gray-600 text-[#00df9a] font-semibold py-2 px-4 rounded">
           Book
         </button>
       </div>
@@ -41,23 +42,19 @@ const HostelCard = ({ name, image, distance, location, rating }) => {
 const HardHostelCards = () => {
   // Dummy data for demonstration, replace it with your actual data
   const hostels = [
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
-    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", rating: 4 },
+    { name: "Hostel A", image: hostel1, distance: "2 miles", location: "City Center", gender: "males", rating: 4 },
+    { name: "Hostel B", image: hostel1, distance: "1 mile", location: "Downtown", gender: "males", rating: 3 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
+    { name: "Hostel C", image: hostel1, distance: "3 miles", location: "Suburb" , gender: "males", rating: 5 },
     // Add more hostels as needed
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 overflow-y-auto max-h-screen">
       {hostels.map((hostel, index) => (
         <HostelCard
           key={index}
@@ -65,6 +62,7 @@ const HardHostelCards = () => {
           image={hostel.image}
           distance={hostel.distance}
           location={hostel.location}
+          gender={hostel.gender} // Passing gender to HostelCard component
           rating={hostel.rating}
         />
       ))}
@@ -73,4 +71,6 @@ const HardHostelCards = () => {
 };
 
 export default HardHostelCards;
+
+
 
