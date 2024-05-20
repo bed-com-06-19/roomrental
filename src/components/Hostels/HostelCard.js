@@ -1,20 +1,21 @@
 import React from 'react';
 import hostel1 from '../../Assets/Images/hostel1.jpg';
+import backgroundImage from '../../Assets/Images/taiga-ishii-mukO8Po_LZ8-unsplash.jpg';
 
 const HostelCard = ({ name, image, distance, price, location, gender, rating }) => {
   return (
-    <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
+    <div className="bg-gray-800 text-white rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
       <div className="w-full md:h-48 overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2">{name}</h2>
-        <p className="text-sm text-gray-600 mb-2">Distance from Campus: {distance}</p>
-        <p className="text-sm text-gray-600 mb-2">Price From: {price}</p>
-        <p className="text-sm text-gray-600 mb-2">Location: {location}</p>
-        <p className="text-sm text-gray-600 mb-2">Gender: {gender}</p> {/* Displaying gender */}
+        <p className="text-sm mb-2">Distance from Campus: {distance}</p>
+        <p className="text-sm mb-2">Price From: {price}</p>
+        <p className="text-sm mb-2">Location: {location}</p>
+        <p className="text-sm mb-2">Gender: {gender}</p> {/* Displaying gender */}
         <div className="flex items-center mb-2">
-          <p className="text-sm text-gray-600 mr-2">Rating:</p>
+          <p className="text-sm mr-2">Rating:</p>
           <div className="flex">
             {[...Array(rating)].map((_, index) => (
               <svg
@@ -32,7 +33,7 @@ const HostelCard = ({ name, image, distance, price, location, gender, rating }) 
             ))}
           </div>
         </div>
-        <button className="bg-gray-500 hover:bg-gray-600 text-[#00df9a] font-semibold py-2 px-4 rounded">
+        <button className="bg-gray-600 hover:bg-gray-700 text-[#00df9a] font-semibold py-2 px-4 rounded">
           Book
         </button>
       </div>
@@ -41,7 +42,6 @@ const HostelCard = ({ name, image, distance, price, location, gender, rating }) 
 };
 
 const HardHostelCards = () => {
-  
   const hostels = [
     { name: "Hostel A", image: hostel1, distance: "2 miles", price: "40000MWK", location: "City Center", gender: "males", rating: 4 },
     { name: "Hostel B", image: hostel1, distance: "1 mile", price: "40000MWK", location: "Downtown", gender: "males", rating: 3 },
@@ -51,23 +51,27 @@ const HardHostelCards = () => {
     { name: "Hostel C", image: hostel1, distance: "3 miles", price: "40000MWK", location: "Suburb", gender: "males", rating: 5 },
     { name: "Hostel C", image: hostel1, distance: "3 miles", price: "40000MWK", location: "Suburb", gender: "males", rating: 5 },
     { name: "Hostel C", image: hostel1, distance: "3 miles", price: "40000MWK", location: "Suburb", gender: "males", rating: 5 },
-  
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
-      {hostels.map((hostel, index) => (
-        <HostelCard
-          key={index}
-          name={hostel.name}
-          image={hostel.image}
-          distance={hostel.distance}
-          price = {hostel.price}
-          location={hostel.location}
-          gender={hostel.gender}
-          rating={hostel.rating}
-        />
-      ))}
+    <div className="bg-cover bg-center p-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="bg-black bg-opacity-75 p-8 rounded-lg">
+        <h1 className="text-3xl font-bold text-white mb-8 text-center">Available Hostels</h1> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {hostels.map((hostel, index) => (
+            <HostelCard
+              key={index}
+              name={hostel.name}
+              image={hostel.image}
+              distance={hostel.distance}
+              price={hostel.price}
+              location={hostel.location}
+              gender={hostel.gender}
+              rating={hostel.rating}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

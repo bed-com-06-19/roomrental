@@ -7,15 +7,12 @@ const Hostels = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex-grow flex items-center justify-center bg-gray-600">
-        <div className="container mx-auto max-w-screen-xl px-4">
-          <HardHostelCards />
-        </div>
+      <div className="flex-grow mt-16"> {/* Added mt-16 to push content below the navbar */}
+        <HardHostelCards />
       </div>
       <Footer />
     </div>
   );
-}
+};
 
 export default Hostels;
-
