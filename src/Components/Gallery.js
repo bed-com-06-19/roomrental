@@ -1,5 +1,5 @@
 import React from 'react'
-import Image1 from "../Assests/hostel1.jpeg"
+import Image1 from "../Assets/hostel1.jpeg"
 
 const Gallery = () => {
     return (
@@ -11,7 +11,7 @@ const Gallery = () => {
 
                     <h1 className='px-4 text-4xl sm:text-5xl md:text 6ml lg:text-7xl font-bold '> Chikanda <span className='text-black-500'>Hostels</span> </h1>
                 </div>
-                <img className='w-full max-h-[500px] object-cover'src={Image1}/>
+                <img className='w-full max-h-[500px] object-cover'src={Image1} alt='#'/>
             </div>
         </div>
     )

@@ -1,5 +1,7 @@
 import React from 'react'
-import Room1 from "../Assests/Room1.jpeg"
+import room1 from "../Assets/room1.jpeg"
+import room3 from "../Assets/room3.jpeg"
+import room4 from "../Assets/room4.jpeg"
 
 const Rooms = () => {
     return(
@@ -14,7 +16,7 @@ const Rooms = () => {
                 <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Book Now</button>
 
             </div>
-            <img className='w-full max-h-[600px] object-cover'src={Room1} alt='#'/>
+            <img className='w-full max-h-[600px] object-cover'src={room1} alt='#'/>
         </div>
 
         <div className='rounded-xl relative'>
@@ -26,7 +28,7 @@ const Rooms = () => {
                 <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Book Now</button>
 
             </div>
-            <img className='w-full max-h-[600px] object-cover'src={Room1} alt='#'/>
+            <img className='w-full max-h-[600px] object-cover'src={room3} alt='#'/>
         </div>
 
         <div className='rounded-xl relative'>
@@ -38,7 +40,7 @@ const Rooms = () => {
                 <button className='border-white bg-white text-black mx-2 absolute bottom-4'>Book Now</button>
 
             </div>
-            <img className='w-full max-h-[600px] object-cover'src={Room1} alt='#'/>
+            <img className='w-full max-h-[600px] object-cover'src={room4} alt='#'/>
         </div>
     </div>
     )
