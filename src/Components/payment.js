@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 
 const Payment = () => {
   const [paymentData, setPaymentData] = useState({
-    cardName: "",
-    cardNumber: "",
-    password: ""
+    cardName: '',
+    phoneNum: '',
+    cardPassword: ''
   });
 
   const handleChange = (e) => {
@@ -13,91 +14,72 @@ const Payment = () => {
   };
 
   return (
-    <>
-    <div className="w-full max-w-md flex flex-col items-center justify-center bg-black-100 ">
-      <div className="flex justify-center mb-8">
-        <img src="images/paypal.jfif" alt="PayPal Logo" className="h-16 md:h-24 lg:h-16 xl:h-40 w-32" />
-        <img src="images/mpamba.jfif" alt="PayPal Logo" className="h-16 md:h-24 lg:h-16 xl:h-40 w-32" />
-        <img src="images/airtelmoney.jfif" alt="PayPal Logo" className="h-16 md:h-24 lg:h-32 xl:h-40 w-32" />
+    <div className="bg-white mt-20">
+      <div className="flex justify-center items-center mt-16">
+        <img src="images/paypal.jfif" alt="PayPal Logo" className="w-32 h-40 mx-4" />
+        <img src="images/mpamba.jfif" alt="MPamba Logo" className="w-32 h-40 mx-4" />
+        <img src="images/airtelmoney.jfif" alt="Airtel Money Logo" className="w-32 h-40 mx-4" />
       </div>
 
-      <div className="text-center">
-        <h3 className="text-3xl font-bold mb-8 text-black">PAYMENT DETAILS</h3>
-        <ul class="list-none">
-    <li class="mb-2">
-        <input type="radio" id="mpamba" name="payment" value="mpamba" class="mr-2"/>
-        <label for="mpamba">Mpamba</label>
-    </li>
-    <li class="mb-2">
-        <input type="radio" id="airtel_money" name="payment" value="airtel_money" class="mr-2"/>
-        <label for="airtel_money">Airtel Money</label>
-    </li>
-    <li>
-        <input type="radio" id="paypal" name="payment" value="paypal" class="mr-2"/>
-        <label for="paypal">PayPal</label>
-    </li>
-</ul>
+      <div className="bg-pink-100 max-w-md p-8 rounded-lg shadow-lg mx-auto mt-8">
+        <h3 className="text-center text-3xl font-bold mb-8 text-black">PAYMENT DETAILS</h3>
 
-      </div>
+        <ul className="list-none">
+          <li className="mb-4">
+            <input type="radio" name="payment" value="mpamba" />
+            <label htmlFor="mpamba" className="ml-2">Mpamba</label>
+          </li>
+          <li className="mb-4">
+            <input type="radio" name="payment" value="airtel" />
+            <label htmlFor="airtel" className="ml-2">Airtel Money</label>
+          </li>
+          <li>
+            <input type="radio" name="payment" value="paypal" />
+            <label htmlFor="paypal" className="ml-2">PayPal</label>
+          </li>
+        </ul>
 
-      <form className="flex flex-col gap-4 bg-pink-100 rounded-lg p-8 shadow-lg">
-        <div className="flex flex-row items-center gap-4">
-          <div className="w-1/3">
-            <label className="block text-gray-700" htmlFor="cardName">Cardhorder Name:</label>
-          </div>
-          <div className="w-2/3">
-            <input
-              className="w-full border border-gray-300 px-4 py-2 rounded-md"
-              name="cardName" placeholder="Rodrick Jere"
-              type="text"
-              onChange={handleChange}
-              value={paymentData.cardName}
-              required
-            />
-          </div>
-        </div>
-        <div className="flex flex-row items-center gap-4">
-          <div className="w-1/3">
-            <label className="block text-gray-700" htmlFor="cardNumber">CardHolder Number:</label>
-          </div>
-          <div className="w-2/3">
-            <input
-              className="w-full border border-gray-300 px-4 py-2 rounded-md"
-              name="cardNumber" placeholder="0000 0000 0000"
-              type="text"
-              onChange={handleChange}
-              value={paymentData.cardNumber}
-          required
-            />
-          </div>
-        </div>
-        <div className="flex flex-row items-center gap-4">
-          <div className="w-1/3">
-            <label className="block text-gray-700" htmlFor="password">password:</label>
-          </div>
-          <div className="w-2/3">
-            <input
-              className="w-full border border-gray-300 px-4 py-2 rounded-md"
-              name="password" placeholder="Enter your card password"
-              type="password"
-              onChange={handleChange}
-              value={paymentData.password}
-          required
-            />
-          </div>
-        </div>
-        <div className="flex justify-end">
+        <div className="mt-8">
+          <label htmlFor="phoneNum" className="block text-gray-700 mb-2">Phone Number:</label>
+          <input
+            type=""
+            name="phoneNum"
+            placeholder="088 863 9011"
+            value={paymentData.phoneNum}
+            onChange={handleChange}
+            className="w-full border border-gray-300 p-2 rounded-md mb-4"
+            maxLength={10}
+          />
+
+          <label htmlFor="email" className="block text-gray-700 mb-2">Email:</label>
+          <input
+           placeholder="bsc-com-06-21@unima.ac.mw"
+            type="email"
+            name="email"
+            value={paymentData.email}
+            onChange={handleChange}
+            className="w-full border border-gray-300 p-2 rounded-md mb-4"
+          />
+
+          <label htmlFor="password" className="block text-gray-700 mb-2">Password (Max 8 characters):</label>
+          <input
+            type="password"
+            name="password"
+            value={paymentData.password}
+            onChange={handleChange}
+            className="w-full border border-gray-300 p-2 rounded-md mb-4"
+            maxLength={8}
+          />
+
           <button
-            className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600"
-            type="submit"
-            onClick={() => alert('You have successfully booked a room')}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+            onClick={() => alert('Room booked successfully!')}
           >
             Confirm
           </button>
         </div>
-      </form>
+      </div>
     </div>
-    </>
   );
 };
 

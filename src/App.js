@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="bg-black-100 h-screen flex justify-center items-center">
       
-      <Payment />
+      <Payment  />
     </div>
   );
 }
