@@ -1,12 +1,13 @@
-import React from "react";
-
+import './App.css';
+import Login from './COMPONENT/header/login';
 function App() {
   return (
-    <div className="flex flex-row w-">
-      
-      My app
-    </div>
+    <div>
+   <Login/> 
+     
+     </div>
   );
 }
 
 export default App;
+
