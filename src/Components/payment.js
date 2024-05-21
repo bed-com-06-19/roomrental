@@ -9,7 +9,9 @@ const Payment = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    e.preventDefault();
+        const { name, value } = e.target;
+    
     setPaymentData({ ...paymentData, [name]: value });
   };
 
