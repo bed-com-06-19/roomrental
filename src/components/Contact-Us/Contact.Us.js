@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'tailwindcss/tailwind.css';
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
-import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons';
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import BackgroundImage from "../../Assets/JPEG_20240512_233504_1218964659441915235.jpg";
 
 const ContactUs = () => {
