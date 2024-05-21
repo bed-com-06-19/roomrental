@@ -1,51 +1,82 @@
-import React from "react"; 
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'tailwindcss/tailwind.css';
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
-import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
-
-
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons';
+import BackgroundImage from "../../Assets/JPEG_20240512_233504_1218964659441915235.jpg";
 
 const ContactUs = () => {
     return (
-        <div className="bg-gray-500">
-            <h1 className=" flex justify-center text-xl mb-4 font-bold">
-                  WELCOME TO MY CONTACT PAGE
-            </h1>
-            <div>
-                <h1>CONTACT INFORMATION:</h1>
-                <h2>Have a question or need an assistant? We are here to help. Simply fill out the form below, and we will get back to you as soon as possible.</h2>
+        <div 
+            className="min-h-screen bg-black text-white flex flex-col items-center pt-2"
+            style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+            <div className="text-2xl mb-4 font-bold"> 
+                CONTACT US
             </div>
-            <section className="Contact">
-                <div className="Container">
-                        <div className="contact-info">
-                         <h2>Contact Us</h2>
-                            <h4 className="text-l mb-4">CONTACT INFORMATION</h4>
-                            <h5 className="flex items-center mb-2"><FontAwesomeIcon icon={faEnvelopeSquare} className="mr-2" /> Emailexample@gmail.com</h5>
-                            <h5 className="flex items-center mb-2"><FontAwesomeIcon icon={faPhone} className="mr-2" /> +2653287094</h5>
-                            <h5 className="flex items-center mb-2"><FontAwesomeIcon icon={faTwitter} className="mr-2" /> faTwitter</h5>
-                            <h5 className="flex items-center mb-2"><FontAwesomeIcon icon={faInstagram} className="mr-2" /> instagram</h5>
+            <h1 className="flex items-center text-center">
+                Have a question or need assistance? We're here to help! Simply fill out the form below and we'll get back to you as soon as possible. Your satisfaction is our priority.
+            </h1>
+            <section className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-800 bg-opacity-75 p-8 rounded-lg mt-8">
+                <div className="contact-info space-y-4">
+                    <div className="flex flex-col space-y-10 align-center">
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faEnvelopeSquare} className="text-4xl mr-2" />
+                            <p>davienyirong97@gmail.com</p>
                         </div>
-                        <div className="contact-Form">
-    
-                                <form>
-                                    <div className="form-group"> 
-                                        <div>SEND US A MESSAGE</div>
-                                        <input type="text" name="Name" placeholder="Enter your Name" required />
-                                    </div>
-                                    <div className="form-group"> 
-                                        <input type="text" name="Email" placeholder="Enter Your Email" required />
-                                    </div>
-                                    <div className="form-group"> 
-                                        <input type="text" name="Message" placeholder="Type your message" required />
-                                    </div>
-                                    <button type="submit">Submit</button>
-                                </form>
-                          </div>
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faPhone} className="text-4xl mr-2" />
+                            <p>+2653287093</p>
+                        </div>
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faTwitter} className="text-4xl mr-2" />
+                            <p>Twitter</p>
+                        </div>
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faInstagram} className="text-4xl mr-2" />
+                            <p>Instagram</p>
+                        </div>
                     </div>
+                </div>
+                <div className="contact-Form">
+                    <form className="space-y-4">
+                        <div className="form-group"> 
+                            <div className="text-lg mb-2 text-white">Send a message</div>
+                            <input 
+                                type="text" 
+                                name="Name" 
+                                placeholder="Enter your Name" 
+                                required 
+                                className="w-full p-4 rounded border border-gray-300 text-black"
+                            />
+                        </div>
+                        <div className="form-group"> 
+                            <input 
+                                type="email" 
+                                name="Email" 
+                                placeholder="Enter Your Email: example@gmail.com" 
+                                required 
+                                className="w-full p-4 rounded border border-gray-300 text-black"
+                            />
+                        </div>
+                        <textarea
+                            className="w-full p-2 border-b-2 border-gray-300 bg-transparent text-lg text-white outline-none"
+                            placeholder="Type message"
+                            required
+                            rows="3"
+                        ></textarea>
+                        <button 
+                            type="Send" 
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        >
+                            Send
+                        </button>
+                    </form>
+                </div>
             </section>
         </div>
     );
 };
+
 export default ContactUs;
