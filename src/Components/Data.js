@@ -3,6 +3,7 @@ import room2 from "../Assets/room2.jpeg";
 import room3 from "../Assets/room3.jpeg";
 import room4 from "../Assets/room1.jpeg";
 
+
 const cardData = [
   {
     id: 1,
