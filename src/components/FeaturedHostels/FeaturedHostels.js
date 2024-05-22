@@ -5,14 +5,14 @@ import servicesImage from '../../Assets/Images/our service2.jpg';
 
 const FeaturedHostels = () => {
   const hostels = [
-    { name: "Malingu hostel", image: hostel1, distance: "3 miles", price: "40000MWK", location: "Rural", gender: "males" },
-    { name: "white house", image: hostel1, distance: "5 miles", price: "20000MWK", location: "Suburb", gender: "males" },
-    { name: "Kabwazi hostel", image: hostel1, distance: "3 miles", price: "40000MWK", location: "mid-rural", gender: "males" },
-    { name: "white house", image: hostel1, distance: "3 miles", price: "80000MWK", location: "Suburb", gender: "males" },
-    { name: "Ndola hostel", image: hostel1, distance: "1 miles", price: "40000MWK", location: "Downtown", gender: "males" },
-    { name: "Kabwazi hostel", image: hostel1, distance: "1 miles", price: "40000MWK", location: "Suburb", gender: "males" },
-    { name: "Kabwazi hostel", image: hostel1, distance: "1 miles", price: "40000MWK", location: "Suburb", gender: "males" },
-    { name: "Petite hostel", image: hostel1, distance: "3 miles", price: "40000MWK", location: "rural", gender: "males" },
+    { name: "Malingu hostel", image: hostel1, distance: "3 miles", Bookingfee: "4000MWK", location: "Rural", gender: "males" },
+    { name: "white house", image: hostel1, distance: "5 miles", Bookingfee: "2000MWK", location: "Suburb", gender: "males" },
+    { name: "Kabwazi hostel", image: hostel1, distance: "3 miles", Bookingfee: "4000MWK", location: "mid-rural", gender: "males" },
+    { name: "white house", image: hostel1, distance: "3 miles", Bookingfee: "8000MWK", location: "Suburb", gender: "males" },
+    { name: "Ndola hostel", image: hostel1, distance: "1 miles", Bookingfee: "4000MWK", location: "Downtown", gender: "males" },
+    { name: "Kabwazi hostel", image: hostel1, distance: "1 miles", Bookingfee: "4000MWK", location: "Suburb", gender: "males" },
+    { name: "Kabwazi hostel", image: hostel1, distance: "1 miles", Bookingfee: "4000MWK", location: "Suburb", gender: "males" },
+    { name: "Petite hostel", image: hostel1, distance: "3 miles", Bookingfee: "4000MWK", location: "rural", gender: "males" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const FeaturedHostels = () => {
               <img src={hostel.image} alt={hostel.name} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{hostel.name}</h3>
-                <p className="text-sm text-gray-300 mb-2">Price: {hostel.price}</p>
+                <p className="text-sm text-gray-300 mb-2">Price: {hostel.Bookingfee}</p>
                 <p className="text-sm text-gray-300 mb-2">Distance: {hostel.distance}</p>
                 <p className="text-sm text-gray-300 mb-2">Location: {hostel.location}</p>
                 <p className="text-sm text-gray-300 mb-2">Gender: {hostel.gender}</p>
