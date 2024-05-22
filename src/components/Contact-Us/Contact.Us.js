@@ -4,7 +4,7 @@ import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import 'tailwindcss/tailwind.css';
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
-import BackgroundImage from "../../Assets/JPEG_20240512_233504_1218964659441915235.jpg";
+import BackgroundImage from "../../Assets/pexels-iriser-1366957.jpg";
 
 const ContactUs = () => {
     return (
@@ -20,6 +20,7 @@ const ContactUs = () => {
             </h1>
             <section className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-800 bg-opacity-75 p-8 rounded-lg mt-8">
                 <div className="contact-info space-y-4">
+                    <button>
                     <div className="flex flex-col space-y-10 align-center">
                         <div className="flex items-center">
                             <FontAwesomeIcon icon={faEnvelopeSquare} className="text-4xl mr-2" />
@@ -38,6 +39,7 @@ const ContactUs = () => {
                             <p>Instagram</p>
                         </div>
                     </div>
+                    </button>
                 </div>
                 <div className="contact-Form">
                     <form className="space-y-4">
@@ -64,7 +66,7 @@ const ContactUs = () => {
                             className="w-full p-2 border-b-2 border-gray-300 bg-transparent text-lg text-white outline-none"
                             placeholder="Type message"
                             required
-                            rows="3"
+                            rows="6"
                         ></textarea>
                         <button 
                             type="Send" 

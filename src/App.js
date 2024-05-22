@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUs  stfrom "./components/Contact-Us/Contact.Us";
+import ContactUs from "./components/Contact-Us/Contact.Us";
 
 function App() {
   return (
