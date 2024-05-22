@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeModernIcon, Bars3BottomRightIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import {
+  FaDribbbleSquare,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaTwitterSquare
+} from 'react-icons/fa';
+
 
 const Navbar = () => {
   let Links = [
@@ -27,7 +35,7 @@ const Navbar = () => {
       <div className='md:px-10 py-4 px-7 md:flex justify-between items-center'>
       
         <div className='flex items-center gap-2'>
-          <HomeModernIcon className='w-7 h-7 text-brown-600'/>
+          <HomeModernIcon className='w-7 h-7 text-brown-600'/> {/* House or hotel icon */}
           <span className='text-xl font-bold text-[#00df9a]'>RoomRental</span>
         </div>
 
@@ -47,8 +55,16 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <button className='btn bg-gray-500 text-[#00df9a] py-1 px-3 md:ml-8 rounded'>LogIn</button>
+            <button className='btn bg-gray-500 text-[#00df9a] py-1 px-3 md:ml-8 rounded'>Log In</button>
           </li>
+          {/* Icons on the far right */}
+          <div className="flex items-center ml-4">
+            <FaFacebookSquare size={20} className="text-gray-300 mr-2 cursor-pointer" />
+            <FaDribbbleSquare size={20} className="text-gray-300 mr-2 cursor-pointer" />
+            <FaGithubSquare size={20} className="text-gray-300 mr-2 cursor-pointer" />
+            <FaInstagram size={20} className="text-gray-300 mr-2 cursor-pointer" />
+            <FaTwitterSquare size={20} className="text-gray-300 mr-2 cursor-pointer" />
+          </div>
         </ul>
 
         <div className="md:relative md:flex md:items-center md:ml-4">
