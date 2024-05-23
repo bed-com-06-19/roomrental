@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import Single1 from "../Assets/Single1.jpg";
+import Single2 from "../Assets/Single2.jpeg";
+import SingleC from "../Assets/SIngleC.jpeg";
+import Double1 from "../Assets/Double1.jpeg";
+import DoubleC from "../Assets/DoubleC.jpeg";
+import Triple1 from "../Assets/Triple1.jpeg";
+import TripleC from "../Assets/TripleC.jpeg";
+
 import backgroundImage from "../Assets/Background.jpg";
 
 const RoomCard = ({ type, price, view, kind, bookingFee }) => {
   return (
     <div className="bg-black bg-opacity-10 text-white rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
       <div className="w-full md:h-48 overflow-hidden">
-        <img src={Single1} alt={type} className="w-full h-full object-cover" />
+        <img src={TripleC} alt={type} className="w-full h-full object-cover" />
       </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2">{type}</h2>
@@ -40,7 +47,7 @@ const RoomFilter = ({ filters, setFilters, isVisible, toggleVisibility }) => {
     >
       <h2 className="text-lg font-semibold mb-4">Choose Room By: </h2>
       <div className="mb-4">
-        <label className="block text-sm font-medium mb-2">Type Of Room</label>
+        <label className="block text-sm font-medium mb-2">Room Type</label>
         <select
           name="type"
           value={filters.type}
@@ -102,7 +109,7 @@ const TheRoomCard = () => {
 
   const rooms = [
     {
-      image: Single1,
+      image: SingleC,
       type: "Single Room",
       price: "MKW 65,000.00",
       view: "Window View",
@@ -110,7 +117,7 @@ const TheRoomCard = () => {
       bookingFee: "MKW 10,000.00",
     },
     {
-      image: Single1,
+      image: DoubleC,
       type: "Double Room",
       price: "MKW 65,000.00",
       view: "Close to Door",
@@ -118,7 +125,55 @@ const TheRoomCard = () => {
       bookingFee: "MKW 10,000.00",
     },
     {
+      image: TripleC,
+      type: "Triple Room",
+      price: "MKW 65,000.00",
+      view: "Window View",
+      kind: "Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
+      image: Single2,
+      type: "Single Room",
+      price: "MKW 65,000.00",
+      view: "Close to Door",
+      kind: "Not Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
+      image: DoubleC,
+      type: "Double Room",
+      price: "MKW 65,000.00",
+      view: "Window View",
+      kind: "Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
+      image: Triple1,
+      type: "Triple Room",
+      price: "MKW 65,000.00",
+      view: "Window View",
+      kind: "Not Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
       image: Single1,
+      type: "Single Room",
+      price: "MKW 65,000.00",
+      view: "Window View",
+      kind: "Not Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
+      image: DoubleC,
+      type: "Double Room",
+      price: "MKW 65,000.00",
+      view: "Close to Door",
+      kind: "Self-Contained",
+      bookingFee: "MKW 10,000.00",
+    },
+    {
+      image: TripleC,
       type: "Triple Room",
       price: "MKW 65,000.00",
       view: "Window View",
@@ -129,36 +184,12 @@ const TheRoomCard = () => {
       image: Single1,
       type: "Single Room",
       price: "MKW 65,000.00",
-      view: "Close to Door",
-      kind: "Not Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
-      type: "Double Room",
-      price: "MKW 65,000.00",
-      view: "Window View",
-      kind: "Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
-      type: "Triple Room",
-      price: "MKW 65,000.00",
       view: "Window View",
       kind: "Not Self-Contained",
       bookingFee: "MKW 10,000.00",
     },
     {
-      image: Single1,
-      type: "Single Room",
-      price: "MKW 65,000.00",
-      view: "Window View",
-      kind: "Not Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
+      image: Double1,
       type: "Double Room",
       price: "MKW 65,000.00",
       view: "Close to Door",
@@ -166,31 +197,7 @@ const TheRoomCard = () => {
       bookingFee: "MKW 10,000.00",
     },
     {
-      image: Single1,
-      type: "Triple Room",
-      price: "MKW 65,000.00",
-      view: "Window View",
-      kind: "Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
-      type: "Single Room",
-      price: "MKW 65,000.00",
-      view: "Window View",
-      kind: "Not Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
-      type: "Double Room",
-      price: "MKW 65,000.00",
-      view: "Close to Door",
-      kind: "Self-Contained",
-      bookingFee: "MKW 10,000.00",
-    },
-    {
-      image: Single1,
+      image: TripleC,
       type: "Triple Room",
       price: "MKW 65,000.00",
       view: "Window View",
