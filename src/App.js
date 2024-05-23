@@ -11,7 +11,7 @@ function App() {
         style={{ BackgroundImage: `url(${BackgroundImage})` }}
       >
         <div className="flex-grow mt-16">
-          <Gallery /> {/* Added mt-16 to push content below the navbar */}
+          <Gallery /> 
           <TheRoomCard />
         </div>
       </div>

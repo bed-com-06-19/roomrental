@@ -7,13 +7,13 @@ const Gallery = () => {
       <div className="max-h-[1500px] relative ">
         {/*overly*/}
         <div className="absolute w-full h-full text-grat-200 max-h-[500px] gg-black/40 flex flex-col justify-center">
-          <h1 className="px-4 text-4xl sm:text-5xl md:text 6ml lg:text-7xl font-bold text-grey-500">
+          <h1 className="px-4 text-4xl sm:text-5xl md:text 6ml lg:text-7xl font-bold text-white">
             The <span className="text-blue-500">Felixson</span>{" "}
           </h1>
 
           <h1 className="px-4 text-4xl sm:text-5xl md:text 6ml lg:text-7xl font-bold text-blue-500 ">
             {" "}
-            Chikanda <span className="">Hostels</span>{" "}
+            Chikanda <span className="text-white">Hostels</span>{" "}
           </h1>
         </div>
         <img

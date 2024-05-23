@@ -14,7 +14,7 @@ const RoomCard = ({ type, price, view, kind, bookingFee }) => {
   return (
     <div className="bg-black bg-opacity-10 text-white rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
       <div className="w-full md:h-48 overflow-hidden">
-        <img src={TripleC} alt={type} className="w-full h-full object-cover" />
+        <img src={Single1} alt={type} className="w-full h-full object-cover" />
       </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2">{type}</h2>
@@ -22,7 +22,7 @@ const RoomCard = ({ type, price, view, kind, bookingFee }) => {
         <p className="text-sm mb-2">View: {view}</p>
         <p className="text-sm mb-2">Kind: {kind}</p>
         <p className="text-sm mb-2">Booking Fee: {bookingFee}</p>
-        <button className="bg-gray-600 hover:bg-gray-700 text-[#00df9a] font-semibold py-2 px-4 rounded">
+        <button className="bg-gray-600 hover:bg-blue-700 text-[#00df9a] font-semibold py-2 px-4 rounded">
           Make Payments
         </button>
       </div>
