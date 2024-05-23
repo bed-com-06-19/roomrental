@@ -1,3 +1,4 @@
+
 import './App.css';
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -11,6 +12,16 @@ function App() {
         <Route path='Home' element={<LandingPage/>}/>
       </Routes>
     </BrowserRouter>
+
+// import React from "react";
+
+// function App() {
+//   return (
+//     <div className="flex flex-row w-">
+    
+//       My app
+//     </div>
+// >>>>>>> 44003ae2a6412671c00009c026ddd90329e43cfd
   );
 }
 
