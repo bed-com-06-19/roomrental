@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='Home' element={<LandingPage/>}/>
+        <Route path='hosterls' element={<LandingPage/>}/>
       </Routes>
     </BrowserRouter>
 
