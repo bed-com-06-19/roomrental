@@ -11,9 +11,9 @@ function LandingPage() {
           <h2 className='mr-8 font-bolder text-2xl'>RoomRental</h2> 
           <Link to="Home" className='no-underline text-lg ml-20 text-white font-bold                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                        hover:text-aqua hover:text-green-500'>Home</Link>
-          <Link to="" c lassName='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>Hostels</Link>
-          <Link to="" cl assName='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>About</Link>
-          <Link to="" cla ssName='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>Contact</Link>
+          <Link to="" className='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>Hostels</Link>
+          <Link to="" className='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>About</Link>
+          <Link to="" className='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>Contact</Link>
           <Link to="" className='no-underline text-lg ml-20 text-white font-bold hover:text-aqua hover:text-green-500'>Login</Link>
           <div className="ml-auto flex space-x-4">
             <FontAwesomeIcon icon={faInstagram} size="lg hover:text-green-500" />
