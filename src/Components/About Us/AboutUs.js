@@ -30,6 +30,7 @@ const AboutUs = () => {
                 <p className="text-white mb-4">
                   We enjoy offering our services to you. If you have any questions or comments, please don't hesitate to contact us.
                 </p>
+                
               </div>
             </main>
           </div>
