@@ -7,6 +7,11 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import BackgroundImage from "../../Assets/pexels-iriser-1366957.jpg";
 
 const ContactUs = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Your query has been received!!! we will come back to you as soon as possible');
+    };
+
     return (
         <div 
             className="min-h-screen bg-black text-white flex flex-col items-center pt-2"
@@ -20,7 +25,6 @@ const ContactUs = () => {
             </h1>
             <section className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-800 bg-opacity-75 p-8 rounded-lg mt-8">
                 <div className="contact-info space-y-4">
-                    <button>
                     <div className="flex flex-col space-y-10 align-center">
                         <div className="flex items-center">
                             <FontAwesomeIcon icon={faEnvelopeSquare} className="text-4xl mr-2" />
@@ -39,10 +43,9 @@ const ContactUs = () => {
                             <p>Instagram</p>
                         </div>
                     </div>
-                    </button>
                 </div>
                 <div className="contact-Form">
-                    <form className="space-y-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="form-group"> 
                             <div className="text-lg mb-2 text-white">Send a message</div>
                             <input 
@@ -69,7 +72,7 @@ const ContactUs = () => {
                             rows="6"
                         ></textarea>
                         <button 
-                            type="Send" 
+                            type="submit" 
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Send
