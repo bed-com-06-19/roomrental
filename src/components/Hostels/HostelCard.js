@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-import hostel1 from '../../Assets/Images/hostel1.jpg';
-import backgroundImage from '../../Assets/Images/hostel_dark.jpg';
-import servicesImage from '../../Assets/Images/thank.jpg';
+import React, { useState } from "react";
+import hostel1 from "../../Assets/Images/hostel1.jpg";
+import backgroundImage from "../../Assets/Images/hostel_dark.jpg";
+import servicesImage from "../../Assets/Images/thank.jpg";
+import { Link } from "react-router-dom";
 
-const HostelCard = ({ name, image, distance, BookingFee, location, gender, rating }) => {
+const HostelCard = ({
+  name,
+  image,
+  distance,
+  BookingFee,
+  location,
+  gender,
+  rating,
+}) => {
   return (
     <div className="bg-black bg-opacity-50 text-white rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105">
       <div className="w-full md:h-48 overflow-hidden">
@@ -35,9 +44,12 @@ const HostelCard = ({ name, image, distance, BookingFee, location, gender, ratin
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <button className="bg-gray-600 hover:bg-gray-700 text-[#00df9a] font-semibold py-2 px-4 rounded">
-            Book
-          </button>
+          <Link to="/Rooms">
+            <button className="bg-gray-600 hover:bg-gray-700 text-[#00df9a] font-semibold py-2 px-4 rounded">
+              Book
+            </button>
+          </Link>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-[#00df9a] hover:text-[#00c78a] cursor-pointer"
@@ -59,48 +71,164 @@ const HostelCard = ({ name, image, distance, BookingFee, location, gender, ratin
 };
 
 const HardHostelCards = () => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
   const hostels = [
-    { name: "Petite hostel", image: hostel1, distance: "2 miles", BookingFee: "40000MWK", location: "City Center", gender: "males", rating: 4 },
-    { name: "Petite hostel", image: hostel1, distance: "1 mile", BookingFee: "40000MWK", location: "Downtown", gender: "females", rating: 3 },
-    { name: "Petite hostel", image: hostel1, distance: "4 miles", BookingFee: "40000MWK", location: "Suburb", gender: "males", rating: 5 },
-    { name: "Hostel C", image: hostel1, distance: "5miles", BookingFee: "40000MWK", location: "Rural", gender: "males", rating: 5 },
-    { name: "Flats hostel", image: hostel1, distance: "3 miles", BookingFee: "30000MWK", location: "Town", gender: "males", rating: 5 },
-    { name: "Malingu hostel", image: hostel1, distance: "3 miles", BookingFee: "40000MWK", location: "Rural", gender: "males", rating: 5 },
-    { name: "white house", image: hostel1, distance: "5 miles", BookingFee: "20000MWK", location: "Suburb", gender: "males", rating: 5 },
-    { name: "Kabwazi hostel", image: hostel1, distance: "3 miles", BookingFee: "40000MWK", location: "mid-rural", gender: "males", rating: 5 },
-    { name: "white house", image: hostel1, distance: "3 miles", BookingFee: "80000MWK", location: "Suburb", gender: "males", rating: 5 },
-    { name: "Ndola hostel", image: hostel1, distance: "1 miles", BookingFee: "40000MWK", location: "Downtown", gender: "males", rating: 5 },
-    { name: "Kabwazi hostel", image: hostel1, distance: "1 miles", BookingFee: "40000MWK", location: "Suburb", gender: "males", rating: 5 },
-    { name: "Petite hostel", image: hostel1, distance: "3 miles", BookingFee: "40000MWK", location: "Rural", gender: "males", rating: 5 },
+    {
+      name: "Petite hostel",
+      image: hostel1,
+      distance: "2 miles",
+      BookingFee: "40000MWK",
+      location: "City Center",
+      gender: "males",
+      rating: 4,
+    },
+    {
+      name: "Petite hostel",
+      image: hostel1,
+      distance: "1 mile",
+      BookingFee: "40000MWK",
+      location: "Downtown",
+      gender: "females",
+      rating: 3,
+    },
+    {
+      name: "Petite hostel",
+      image: hostel1,
+      distance: "4 miles",
+      BookingFee: "40000MWK",
+      location: "Suburb",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Hostel C",
+      image: hostel1,
+      distance: "5miles",
+      BookingFee: "40000MWK",
+      location: "Rural",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Flats hostel",
+      image: hostel1,
+      distance: "3 miles",
+      BookingFee: "30000MWK",
+      location: "Town",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Malingu hostel",
+      image: hostel1,
+      distance: "3 miles",
+      BookingFee: "40000MWK",
+      location: "Rural",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "white house",
+      image: hostel1,
+      distance: "5 miles",
+      BookingFee: "20000MWK",
+      location: "Suburb",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Kabwazi hostel",
+      image: hostel1,
+      distance: "3 miles",
+      BookingFee: "40000MWK",
+      location: "mid-rural",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "white house",
+      image: hostel1,
+      distance: "3 miles",
+      BookingFee: "80000MWK",
+      location: "Suburb",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Ndola hostel",
+      image: hostel1,
+      distance: "1 miles",
+      BookingFee: "40000MWK",
+      location: "Downtown",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Kabwazi hostel",
+      image: hostel1,
+      distance: "1 miles",
+      BookingFee: "40000MWK",
+      location: "Suburb",
+      gender: "males",
+      rating: 5,
+    },
+    {
+      name: "Petite hostel",
+      image: hostel1,
+      distance: "3 miles",
+      BookingFee: "40000MWK",
+      location: "Rural",
+      gender: "males",
+      rating: 5,
+    },
   ];
 
   const filteredHostels = hostels.filter((hostel) => {
-    return filter === 'all' || hostel.gender === filter;
+    return filter === "all" || hostel.gender === filter;
   });
 
   return (
-    <div className="bg-cover bg-center p-8 relative z-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div
+      className="bg-cover bg-center p-8 relative z-0"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className="bg-black bg-opacity-20 p-8 rounded-lg relative z-10">
-        <h1 className="text-3xl font-bold text-white text-center mb-4">Available Hostels</h1>
-        <h3 className="text-3x font-bold text-white text-center mb-4">The most comfortable hostel which offers best services you can ever find!</h3>
+        <h1 className="text-3xl font-bold text-white text-center mb-4">
+          Available Hostels
+        </h1>
+        <h3 className="text-3x font-bold text-white text-center mb-4">
+          The most comfortable hostel which offers best services you can ever
+          find!
+        </h3>
         <div className="flex justify-center mb-8">
           <button
-            className={`mx-2 px-4 py-2 rounded ${filter === 'all' ? 'bg-gray-700 text-[#00df9a]' : 'bg-gray-600 text-white hover:bg-gray-700'}`}
-            onClick={() => setFilter('all')}
-          >    
+            className={`mx-2 px-4 py-2 rounded ${
+              filter === "all"
+                ? "bg-gray-700 text-[#00df9a]"
+                : "bg-gray-600 text-white hover:bg-gray-700"
+            }`}
+            onClick={() => setFilter("all")}
+          >
             All
           </button>
           <button
-            className={`mx-2 px-4 py-2 rounded ${filter === 'males' ? 'bg-gray-700 text-[#00df9a]' : 'bg-gray-600 text-white hover:bg-gray-700'}`}
-            onClick={() => setFilter('males')}
+            className={`mx-2 px-4 py-2 rounded ${
+              filter === "males"
+                ? "bg-gray-700 text-[#00df9a]"
+                : "bg-gray-600 text-white hover:bg-gray-700"
+            }`}
+            onClick={() => setFilter("males")}
           >
             Males
           </button>
           <button
-            className={`mx-2 px-4 py-2 rounded ${filter === 'females' ? 'bg-gray-700 text-[#00df9a]' : 'bg-gray-600 text-white hover:bg-gray-700'}`}
-            onClick={() => setFilter('females')}
+            className={`mx-2 px-4 py-2 rounded ${
+              filter === "females"
+                ? "bg-gray-700 text-[#00df9a]"
+                : "bg-gray-600 text-white hover:bg-gray-700"
+            }`}
+            onClick={() => setFilter("females")}
           >
             Females
           </button>
@@ -121,23 +249,27 @@ const HardHostelCards = () => {
         </div>
       </div>
       <div className="bg-black bg-opacity-20 p-6 rounded-lg flex items-center">
-          <div className="w-full md:w-1/2">
-            <img src={servicesImage} alt="Our Services" className="w-full h-full object-cover rounded-lg" />
-          </div>
-          <div className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
-            <p className="text-center md:text-left text-gray-300 mb-4">
-              The best place to find your Comfortable Acccomodations. We only provide the best hostels and offer uur customers the best services.
-            </p>
-            <ul className="list-disc list-inside text-center md:text-left text-gray-300 space-y-2">
-              <h1 className='text-4xl'>THANK YOU!! <br></br>For Visiting us!</h1>
-              
-            </ul>
-          </div>
+        <div className="w-full md:w-1/2">
+          <img
+            src={servicesImage}
+            alt="Our Services"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
+        <div className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
+          <p className="text-center md:text-left text-gray-300 mb-4">
+            The best place to find your Comfortable Acccomodations. We only
+            provide the best hostels and offer uur customers the best services.
+          </p>
+          <ul className="list-disc list-inside text-center md:text-left text-gray-300 space-y-2">
+            <h1 className="text-4xl">
+              THANK YOU!! <br></br>For Visiting us!
+            </h1>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default HardHostelCards;
-
-
