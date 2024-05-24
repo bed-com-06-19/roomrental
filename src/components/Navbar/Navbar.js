@@ -16,7 +16,7 @@ import {
 
 const Navbar = () => {
   let Links = [
-    { name: "Home", link: "/Home" },
+    { name: "Home", link: "/Landing" },
     { name: "Hostels", link: "/Hostel" },
     { name: "Contact", link: "/Contact" },
     { name: "About", link: "/About" },

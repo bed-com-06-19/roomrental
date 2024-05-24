@@ -136,7 +136,7 @@ const Payments = () => {
               Phone Number:
             </label>
             <input
-              type="number"
+              type="text"
               name="phoneNum"
               placeholder="088 863 9011"
               value={paymentData.phoneNum}

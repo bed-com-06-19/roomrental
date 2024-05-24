@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+///import Home from "./pages/Home";
 import Hostel from "./pages/Hostel";
 import Contact from "./pages/Contact";
 import Payment from "./pages/Payment";
@@ -8,13 +8,14 @@ import Rooms from "./pages/Rooms";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import About from "./pages/About";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/landing" element={<Landing />} />
         <Route path="/hostel" element={<Hostel />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/payment" element={<Payment />} />
