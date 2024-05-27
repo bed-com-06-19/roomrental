@@ -7,6 +7,13 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import BackgroundImage from "../../Assets/Images/pexels-iriser-1366957.jpg";
 
 const ContactUs = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(
+      "Your query has been received!!! we will come back to you as soon as possible"
+    );
+  };
+
   return (
     <div
       className="min-h-screen bg-black text-white flex flex-col items-center pt-2"
@@ -49,7 +56,7 @@ const ContactUs = () => {
           </button>
         </div>
         <div className="contact-Form">
-          <form className="space-y-4">
+          <form className="space-y-4 " onSubmit={handleSubmit}>
             <div className="form-group">
               <div className="text-lg mb-2 text-white">Send a message</div>
               <input

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-//import MYBACKGROUND from '../../Components/Assets/PAYBACKGROUND.jpg';
 
-const Payments = () => {
+const Payment = () => {
   const [paymentData, setPaymentData] = useState({
     name: "",
     email: "",
@@ -11,44 +10,60 @@ const Payments = () => {
   });
 
   const handleChange = (e) => {
-    e.preventDefault();
     const { name, value } = e.target;
-
     setPaymentData({ ...paymentData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    if (Object.values(paymentData).every((val) => val !== "")) {
-      alert("Room booked successfully!");
-    } else {
-      //please fill in all the details
-      alert("Room booked successfully!");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    switch (paymentData.payment) {
+      case "paypal":
+        if (paymentData.name !== "" && paymentData.email !== "") {
+          alert("Room booked successfully");
+        } else {
+          alert("Please fill in the missing fields");
+        }
+        break;
+      case "airtel":
+      case "mpamba":
+        if (
+          paymentData.name !== "" &&
+          paymentData.phoneNum !== "" &&
+          paymentData.password !== ""
+        ) {
+          alert("Room booked successfully");
+        } else {
+          alert("Please fill in the missing fields");
+        }
+        break;
+      default:
+        alert("Please select a payment method");
     }
   };
 
   return (
-    <div className="">
-      <div className="flex justify-center items-center mt-24 ">
+    <div className="max-w-screen-md mx-auto px-4">
+      <div className="flex justify-center items-center mt-20">
         <img
           src="/images/paypal.jfif"
           alt="PayPal Logo"
-          className="w-32 h-40 mx-4 rounded-md"
+          className="w-16 h-20 mx-2"
         />
         <img
           src="/images/mpamba.jfif"
           alt="MPamba Logo"
-          className="w-32 h-40 mx-4 rounded-md"
+          className="w-16 h-20 mx-2"
         />
         <img
           src="/images/airtelmoney.jfif"
           alt="Airtel Money Logo"
-          className="w-32 h-40 mx-4 rounded-md"
+          className="w-16 h-20 mx-2"
         />
       </div>
 
-      <div className=" red-100 max-w-md p-8 rounded-lg shadow-lg mx-auto mt-8">
+      <div className="max-w-md p-8 rounded-lg shadow-lg mx-auto mt-8">
         <h3 className="text-center text-3xl font-bold mb-8 text-white">
-          {" "}
           PAYMENT DETAILS
         </h3>
 
@@ -90,7 +105,7 @@ const Payments = () => {
 
         {paymentData.payment === "paypal" && (
           <div className="mt-8">
-            <label htmlFor="name" className="block text-white mb-2">
+            <label htmlFor="name" className="block text-white-700 mb-2">
               Name:
             </label>
             <input
@@ -102,7 +117,7 @@ const Payments = () => {
               className="w-full border border-gray-300 p-2 rounded-md mb-4"
             />
 
-            <label htmlFor="email" className="block text-white mb-2">
+            <label htmlFor="email" className="block text-gray-700 mb-2">
               Email:
             </label>
             <input
@@ -119,7 +134,7 @@ const Payments = () => {
         {(paymentData.payment === "mpamba" ||
           paymentData.payment === "airtel") && (
           <div className="mt-8">
-            <label htmlFor="name" className="block text-white mb-2">
+            <label htmlFor="name" className="block text-gray-700 mb-2">
               Name:
             </label>
             <input
@@ -129,10 +144,9 @@ const Payments = () => {
               value={paymentData.name}
               onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded-md mb-4"
-              required
             />
 
-            <label htmlFor="phoneNum" className="block text-white mb-2">
+            <label htmlFor="phoneNum" className="block text-gray-700 mb-2">
               Phone Number:
             </label>
             <input
@@ -143,15 +157,14 @@ const Payments = () => {
               onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded-md mb-4"
               maxLength={10}
-              required
             />
-
-            <label htmlFor="password" className="block text-white mb-2">
-              Enter cardPIN:
+            <label htmlFor="password" className="block text-gray-700 mb-2">
+              Enter PIN:
             </label>
             <input
               type="password"
               name="password"
+              placeholder="****"
               value={paymentData.password}
               onChange={handleChange}
               className="w-full border border-gray-300 p-2 rounded-md mb-4"
@@ -160,15 +173,18 @@ const Payments = () => {
           </div>
         )}
 
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
-          onClick={handleSubmit}
-        >
-          Confirm
-        </button>
+        <div className="text-center">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="bg-gray-800 text-white p-2 rounded-md mt-4"
+          >
+            Book Room
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Payments;
+export default Payment;
