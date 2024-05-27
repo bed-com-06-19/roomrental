@@ -17,8 +17,8 @@ function LandingPage() {
             Fast and Reliable
           </h2>
           <p className="text-sm md:text-lg lg:text-xl font-bold mb-2">
-            This is the most reliable and efficient way for students to book
-            rooms and landlords to post their available hostels.
+            The most reliable and efficient way for students to book rooms and
+            landlords to post their available hostels.
           </p>
           <p className="text-sm md:text-lg lg:text-xl font-bold mb-2">
             It offers the best way for every student around University of Malawi
